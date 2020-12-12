@@ -1,0 +1,21 @@
+<div class="cursor-pointer" (click)="goList()">< Go back to list</div>
+<div *ngIf="isLoading" class="spinner"></div>
+<div *ngIf="!isLoading && character">
+  <div class="character-main">
+    <div class="character-img">
+      <img [src]="character.thumbnail" [alt]="character.name">
+    </div>
+    <div class="character-info">
+      <h1>{{character.name}}</h1>
+      <h3>
+        <span *ngIf="character.description">{{character.description}}</span>
+        <i *ngIf="!character.description">No description provided</i>
+      </h3>
+      <p>The character appear in {{character.comicsNumber}} comic(s).</p>
+      <p>3 first comics:</p>
+      <ul>
+        <li *ngFor="let comic of comics">{{comic}}</li>
+      </ul>
+    </div>
+  </div>
+</div>

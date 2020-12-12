@@ -1,1 +1,48 @@
 /* You can add global styles to this file, and also import other style files */
+body, html {
+  width: 100%;
+  height: 100%;
+  font-size: 14px;
+  overflow: hidden;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+// Spinner
+@keyframes spinner {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.spinner {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:before {
+    content: '';
+    box-sizing: border-box;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: 1px solid grey;
+    border-top-color: blue;
+    animation: spinner .6s linear infinite;
+  }
+
+  &.spinner-md:before {
+    width: 50px;
+    height: 50px;
+  }
+
+  &.spinner-lg:before {
+    width: 80px;
+    height: 80px;
+  }
+}
