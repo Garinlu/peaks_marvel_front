@@ -1,5 +1,6 @@
 <h2>Marvel Characters</h2>
 <p *ngIf="total"><i>{{total}} characters</i></p>
+<button [routerLink]="'/liked'">Go to my liked characters</button>
 <div class="spinner" *ngIf="isLoading"></div>
 <div *ngIf="!isLoading && characters">
   <div class="list-characters">

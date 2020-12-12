@@ -1,0 +1,13 @@
+<h2>Marvel Characters</h2>
+<p *ngIf="total"><i>{{total}} characters</i></p>
+<button [routerLink]="'/'">Go to my liked characters</button>
+<div class="spinner" *ngIf="isLoading"></div>
+<div *ngIf="!isLoading && characters">
+  <div class="list-characters">
+    <app-character *ngFor="let character of characters" [character]="character"
+                   (likeChange)="initData()"></app-character>
+  </div>
+</div>
+<div class="list-characters" *ngIf="!isLoading && (!characters || !characters.length)">
+  <i>No character Liked.</i>
+</div>

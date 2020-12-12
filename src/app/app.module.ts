@@ -7,13 +7,15 @@ import {CharactersComponent} from './characters/characters.component';
 import {CharacterComponent} from './characters/character/character.component';
 import {CharacterDetailComponent} from './character-detail/character-detail.component';
 import {HttpClientModule} from '@angular/common/http';
+import { LikedCharactersComponent } from './liked-characters/liked-characters.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CharactersComponent,
     CharacterComponent,
-    CharacterDetailComponent
+    CharacterDetailComponent,
+    LikedCharactersComponent
   ],
   imports: [
     BrowserModule,
