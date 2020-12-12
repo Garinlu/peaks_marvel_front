@@ -13,7 +13,7 @@ Angular 8
 To use this client, you must clone this repository
 
 ```shell
-git clone git@github.com:Garinlu/peaks_marvel_front.git
+git clone https://github.com/Garinlu/peaks_marvel_front.git
 ```
 
 Then, install all packages :
