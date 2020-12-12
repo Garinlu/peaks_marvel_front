@@ -1,27 +1,31 @@
-# PeaksMarvelFront
+# Marvel Front
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.1.
+Angular 8
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. 
 
-## Code scaffolding
+## Getting started
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Environment
 
-## Build
+* Node 10
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+### Installation
 
-## Running unit tests
+To use this client, you must clone this repository
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```shell
+git clone git@github.com:Garinlu/peaks_marvel_front.git
+```
 
-## Running end-to-end tests
+Then, install all packages :
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+```shell
+npm install
+```
 
-## Further help
+To finish, you must configure the url of your API. By default, this client will call `http://localhost:8005`.
+To change this value, edit the variable `URL_API` in your `environment.ts` file
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
