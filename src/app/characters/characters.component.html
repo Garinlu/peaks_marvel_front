@@ -1,7 +1,15 @@
 <h2>Marvel Characters</h2>
+<p *ngIf="total"><i>{{total}} characters</i></p>
 <div class="spinner" *ngIf="isLoading"></div>
-<div class="list-characters" *ngIf="!isLoading && characters">
-  <app-character *ngFor="let character of characters" [character]="character"></app-character>
+<div *ngIf="!isLoading && characters">
+  <div class="list-characters">
+    <app-character *ngFor="let character of characters" [character]="character"></app-character>
+  </div>
+  <div class="pagination">
+    <button [disabled]="currentPage < 2" (click)="prevPage()"><</button>
+    <div><b>{{currentPage}}</b></div>
+    <button [disabled]="isLastPage" (click)="nextPage()">></button>
+  </div>
 </div>
 <div class="list-characters" *ngIf="!isLoading && (!characters || !characters.length)">
   <i>No character found</i>
