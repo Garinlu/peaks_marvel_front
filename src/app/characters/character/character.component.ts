@@ -42,6 +42,10 @@ export class CharacterComponent implements OnInit {
       return character.id === this.state.id;
     });
     if (index < 0) {
+      if (likedCharacters.length === 5) {
+        alert('You can\'t like more than 5 characters');
+        return;
+      }
       likedCharacters.push(this.state);
     } else {
       likedCharacters.splice(index, 1);
