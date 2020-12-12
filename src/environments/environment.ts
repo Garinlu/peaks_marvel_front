@@ -6,6 +6,7 @@ export const environment = {
   production: false
 };
 
+/* URL of the Marvel Symfony API */
 export const URL_API = 'http://localhost:8005';
 
 /*

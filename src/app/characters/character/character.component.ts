@@ -22,6 +22,12 @@ export class CharacterComponent implements OnInit {
     this.checkIsLiked();
   }
 
+  ngOnInit() {
+  }
+
+  /**
+   * Check if the current character has been liked
+   */
   checkIsLiked() {
     const likedCharacters = this.cache.get(CacheService.LIKED_CHARACTERS) || [];
     this.isLiked = likedCharacters.findIndex((char) => {
@@ -29,14 +35,14 @@ export class CharacterComponent implements OnInit {
     }) > -1;
   }
 
-  ngOnInit() {
-  }
-
   goToDetail() {
     this.router.navigate(['/' + this.state.id]);
   }
 
-  like() {
+  /**
+   * Like or unlike a character, then save it in local storage
+   */
+  clickOnLike() {
     const likedCharacters: Character[] = this.cache.get(CacheService.LIKED_CHARACTERS) || [];
     const index = likedCharacters.findIndex((character) => {
       return character.id === this.state.id;
