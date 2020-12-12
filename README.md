@@ -2,10 +2,6 @@
 
 Angular 8
 
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. 
-
 ## Getting started
 
 ### Environment
@@ -28,4 +24,8 @@ npm install
 
 To finish, you must configure the url of your API. By default, this client will call `http://localhost:8005`.
 To change this value, edit the variable `URL_API` in your `environment.ts` file
+
+## Run serve
+
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. 
 
